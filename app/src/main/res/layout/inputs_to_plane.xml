@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="match_parent"
+    android:id="@+id/inputsToPlaneLayout"
+    android:background="#000"
+    android:alpha="50">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/GenFieldButtonText"
+        android:id="@+id/displayVectorsButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Display"
+        android:id="@+id/DisplayHeading"
+        android:textAlignment="textStart"
+        android:layout_alignStart="@+id/showBorder"
+
+        android:layout_below="@+id/displayVectorsButton"
+        />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckBoxBorder"
+        android:id="@+id/showBorder"
+        android:checked="true"
+        android:textSize="10dp"
+        android:paddingTop="0dp"
+        android:layout_below="@+id/showAxes"
+        android:layout_alignStart="@+id/showNumbers" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckBoxNumbers"
+        android:id="@+id/showNumbers"
+        android:checked="true"
+        android:textSize="10dp"
+        android:layout_below="@+id/showBorder"
+        android:layout_toLeftOf="@+id/showAxes" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckBoxAxes"
+        android:id="@+id/showAxes"
+        android:checked="true"
+        android:textSize="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/displayVectorsButton"
+        android:layout_alignParentRight="true"/>
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckBoxTicks"
+        android:id="@+id/showTickMarks"
+        android:checked="true"
+        android:textSize="10dp"
+        android:layout_below="@+id/showAxes"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/CheckBoxGrid"
+        android:id="@+id/showGrid"
+        android:checked="true"
+        android:textSize="10dp"
+        android:layout_below="@+id/showTickMarks"
+        android:layout_alignStart="@+id/showTickMarks"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/x1Coordinate"
+        android:width="50dp"
+        android:layout_marginLeft="15dp"
+        android:numeric="signed|integer|decimal"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:height="20dp"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/x2Coordinate"
+        android:layout_marginLeft="5dp"
+        android:width="50dp"
+        android:inputType="number|numberSigned|numberDecimal"
+        android:numeric="signed|integer|decimal"
+        android:height="20dp"
+        android:textSize="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/x1Coordinate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Trajectory Point"
+        android:id="@+id/addTrajectoryPoint"
+        android:layout_below="@+id/x1Coordinate"
+        android:layout_alignStart="@+id/x1Coordinate"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Matrix:"
+        android:id="@+id/MatrixName"
+        android:textSize="10sp"
+        android:layout_alignStart="@+id/addTrajectoryPoint"
+        android:layout_below="@id/addTrajectoryPoint"
+        android:layout_toStartOf="@+id/showBorder" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewPoints"
+        android:layout_below="@+id/MatrixName"
+        android:layout_alignStart="@+id/addTrajectoryPoint"
+        android:layout_toStartOf="@+id/showNumbers"
+        android:scrollIndicators="end"
+        android:layout_alignBottom="@+id/cameraButton"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:id="@+id/PointsLayoutInput">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Points:"
+                android:id="@+id/PointsName"
+                android:textSize="11sp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tweetButton"
+        android:layout_below="@+id/showNumbers"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/tw__composer_logo_blue" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cameraButton"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_below="@+id/showNumbers"
+        android:layout_alignStart="@+id/showNumbers" />
+
+
+</RelativeLayout>

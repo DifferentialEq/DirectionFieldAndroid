@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">DirectionField</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_select_matrix_or_new">SelectMatrixOrNew</string>
+    <string name="SelectMatrixString">New Matrix Or Select One:</string>
+    <string name="welcomeText">DirectionField\nWelcomes You...</string>
+    <string name="title_activity_create_new_matrix">CreateNewMatrix</string>
+    <string name="EnterMatrixText">Enter your matrix:</string>
+    <string name="computeMatrixButton">Compute Matrix</string>
+    <string name="title_activity_edit_points">EditPoints</string>
+    <string name="EditPointsText">Edit which points you want...</string>
+    <string name="title_activity_phase_plane">PhasePlane</string>
+    <string name="title_activity_draw">DrawActivity</string>
+    <string name="CheckBoxTicks">ticks</string>
+    <string name="CheckBoxAxes">axes</string>
+    <string name="CheckBoxNumbers">numbers</string>
+    <string name="CheckBoxGrid">grid</string>
+    <string name="CheckBoxBorder">border</string>
+    <string name="DisplayHeading">DISPLAY</string>
+    <string name="GenFieldButtonText">Display Vector Field</string>
+    <string name="title_activity_about_matrix">AboutMatrix</string>
+    <string name="title_activity_matrix_info">MatrixInfo</string>
+    <string name="title_activity_twitter">Twitter</string>
+</resources>
